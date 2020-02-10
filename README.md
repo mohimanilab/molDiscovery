@@ -26,7 +26,7 @@ Basic example (this is for Linux, please substitute `Linux` to `Darwin` for repl
 ``` 
 If the run is finished correctly, you will see identifications of a nonribosomal peptide (Surugamide) and a polyketide (Chalcomycin) 
 listed in `moldiscovery_outdir/significant_matches.tsv`. The column names are self-explanatory in principle but you can always 
-find more details in the [corresponding section](docs/NPDtools-2.6.0-alpha-manual.md#sec_run_db_moldiscovery#sec_run_output) of the manual.
+find more details in the [corresponding section](docs/NPDtools-2.6.0-alpha-manual.md#sec_run_output) of the manual.
 
 ## Results
 
