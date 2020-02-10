@@ -227,7 +227,7 @@ you may need to specify the full paths as
 `--fdr`  
     Estimate False Discovery Rate (approximately doubles computation time). 
 
-<a name="sec_"></a>
+<a name="sec_run_output"></a>
 ## Common output files
  
 NPDtools pipelines store all their output files in `<output_dir>`, which is set by the user (`-o` option).
