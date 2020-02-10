@@ -6,7 +6,7 @@ MolDiscovery is a mass spectral database search method that improves both effici
 small molecule identification by (i) utilizing an efficient algorithm to generate mass spectrometry fragmentations, 
 and (ii) learning a probabilistic model to match small molecules with their mass spectra.
 A search of over six million spectra from global natural product social molecular networking infrastructure 
-shows that our probabilistic model can correctly identify nearly twice more small molecules than previous method.
+shows that our probabilistic model can identify nearly twice more small molecules than previous method.
 
 MolDiscovery is developed in collaboration of [Carnegie Mellon University](http://mohimanilab.cbd.cmu.edu) (PA, USA) and
 [Saint Petersburg State University](http://cab.spbu.ru) (Russia). 
@@ -31,7 +31,7 @@ find more details in the [corresponding section](docs/NPDtools-2.6.0-alpha-manua
 ## Results
 
 ### Massive GNPS analysis
-We analyzed more than six six million spectra from global natural product social molecular networking infrastructure 
+We analyzed more than six million spectra from global natural product social molecular networking infrastructure 
 (GNPS, <https://gnps.ucsd.edu/>) using molDiscovery and regular Dereplicator+. 
 The figure below demonstrates performance of the both tools at different false discovery rate (FDR) levels.  
 The curves show the number of (A) small molecule-spectrum matches and (B) unique compounds identified by 
