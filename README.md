@@ -10,34 +10,34 @@ shows that our probabilistic model can identify nearly twice more small molecule
 
 MolDiscovery is developed in collaboration of [Carnegie Mellon University](http://mohimanilab.cbd.cmu.edu) (PA, USA) and
 [Saint Petersburg State University](http://cab.spbu.ru) (Russia). 
-The current version (alpha) can be downloaded from <https://github.com/mohimanilab/molDiscovery/releases>.
+The current version (beta) can be downloaded from <https://github.com/mohimanilab/molDiscovery/releases>.
 The stable release and all further versions will be available in the **N**atural **P**roduct **D**iscovery **tool**kit (**NPDtools**) at <https://github.com/ablab/npdtools>.
 
 ## Installation & Running instructions
-Please refer to the [NPDtools manual](docs/NPDtools-2.6.0-alpha-manual.md) for all details. 
-Specific details regarding molDiscovery are in [this section](docs/NPDtools-2.6.0-alpha-manual.md#sec_run_db_moldiscovery).
+Please refer to the [NPDtools manual](docs/NPDtools-2.6.0-beta-manual.md) for all details. 
+Specific details regarding molDiscovery are in [this section](docs/NPDtools-2.6.0-beta-manual.md#sec_run_db_moldiscovery).
 
 Basic example (this is for Linux, please substitute `Linux` to `Darwin` for replicating on macOS):
 ``` bash
-    wget https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-alpha/NPDtools-2.6.0-alpha-Linux.tar.gz
-    tar -xzf NPDtools-2.6.0-alpha-Linux.tar.gz
-    cd NPDtools-2.6.0-alpha-Linux
+    wget https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-beta/NPDtools-2.6.0-beta-Linux.tar.gz
+    tar -xzf NPDtools-2.6.0-beta-Linux.tar.gz
+    cd NPDtools-2.6.0-beta-Linux
     python2.7 bin/moldiscovery.py share/npdtools/test_data/moldiscovery/ --db-path share/npdtools/test_data/sample_database/ -o moldiscovery_outdir
 ``` 
 If the run is finished correctly, you will see identifications of a nonribosomal peptide (Surugamide) and a polyketide (Chalcomycin) 
 listed in `moldiscovery_outdir/significant_matches.tsv`. The column names are self-explanatory in principle but you can always 
-find more details in the [corresponding section](docs/NPDtools-2.6.0-alpha-manual.md#sec_run_output) of the manual.
+find more details in the [corresponding section](docs/NPDtools-2.6.0-beta-manual.md#sec_run_output) of the manual.
 
 ## Results
 
 ### Massive GNPS analysis
-We analyzed more than six million spectra from global natural product social molecular networking infrastructure 
+We analyzed 7.6 million spectra from global natural product social molecular networking infrastructure 
 (GNPS, <https://gnps.ucsd.edu/>) using molDiscovery and regular Dereplicator+. 
 The figure below demonstrates performance of the both tools at different false discovery rate (FDR) levels.  
 The curves show the number of (A) small molecule-spectrum matches and (B) unique compounds identified by 
-Dereplicator+ and molDiscovery in the search of 50 GNPS spectral datasets against AntiMarin.
+Dereplicator+ and molDiscovery in the search of 45 GNPS spectral datasets against AllDB (719,958 compounds from AntiMarin, DNP, UNPD, and other databases).
 
-![alt text](docs/fdr_benchmarking.png "MolDiscovery performance")
+![alt text](docs/GNPS_fdr_benchmarking.png "MolDiscovery performance")
 
 ### Pseudomonas dataset manual curation
 We benchmarked molDiscovery against Dereplicator+ on top 100 identifications from extensively studied GNPS dataset 

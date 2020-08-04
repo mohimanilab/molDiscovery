@@ -1,4 +1,4 @@
-<font size=20>__NPDtools 2.6.0-alpha Manual__</font>
+<font size=20>__NPDtools 2.6.0-beta Manual__</font>
 
 * [About NPDtools](#sec_intro)    
     * [Package content](#sec_intro_content)    
@@ -29,13 +29,13 @@ This manual will help you to install and run NPDtools.
 The latest version of the manual is available online at <https://github.com/ablab/npdtools>. 
 All projects news are at <http://cab.spbu.ru/software/npdtools/>.
  
-NPDtools version 2.6.0-alpha was released under the Apache 2.0 License on February 10, 2020 
+NPDtools version 2.6.0-beta was released under the Apache 2.0 License on February 10, 2020 
 and can be downloaded from <https://github.com/mohimanilab/molDiscovery/releases>.
 The software is developed in collaboration of [Saint Petersburg State University](http://cab.spbu.ru) (Russia), 
 [University of California San Diego](http://cseweb.ucsd.edu/~ppevzner/) (CA, USA) 
 and [Carnegie Mellon University](http://mohimanilab.cbd.cmu.edu) (PA, USA).
 
-**Note:** 2.6.0-alpha is an alpha version release built on top of 2.4.0 and it misses some features of 2.5.0.
+**Note:** 2.6.0-beta is a beta version release built on top of 2.4.0 and it misses some features of 2.5.0.
 The main feature of version 2.6.* is the molDiscovery approach for efficient and accurate database search of small molecules.
 A stable 2.6 release including all 2.5 features and thorough testing of molDiscovery will be released soon and 
 available from <https://github.com/ablab/npdtools/releases>.
@@ -102,13 +102,13 @@ In case of successful installation the following files should be present in the 
 <a name="sec_install_linux"></a>
 ## 	Downloading NPDtools binaries for Linux
 
-To download [NPDtools Linux binaries](https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-alpha/NPDtools-2.6.0-alpha-Linux.tar.gz) 
+To download [NPDtools Linux binaries](https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-beta/NPDtools-2.6.0-beta-Linux.tar.gz) 
 and extract them, go to the directory in which you wish NPDtools to be installed and run:
 
 ``` bash
-    wget https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-alpha/NPDtools-2.6.0-alpha-Linux.tar.gz
-    tar -xzf NPDtools-2.6.0-alpha-Linux.tar.gz
-    cd NPDtools-2.6.0-alpha-Linux
+    wget https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-beta/NPDtools-2.6.0-beta-Linux.tar.gz
+    tar -xzf NPDtools-2.6.0-beta-Linux.tar.gz
+    cd NPDtools-2.6.0-beta-Linux
 ```
 
 We further refer to this directory as `<npdtools_installation_dir>`. 
@@ -119,13 +119,13 @@ so consider adding this subdirectory to the `PATH` variable.
 <a name="sec_install_mac"></a>
 ## 	Downloading NPDtools binaries for macOS
 	
-To download [NPDtools macOS binaries](https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-alpha/NPDtools-2.6.0-alpha-Darwin.tar.gz) 
+To download [NPDtools macOS binaries](https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-beta/NPDtools-2.6.0-beta-Darwin.tar.gz) 
 and extract them, go to the directory in which you wish NPDtools to be installed and run:
 
 ``` bash
-    curl https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-alpha/NPDtools-2.6.0-alpha-Darwin.tar.gz -o NPDtools-2.6.0-alpha-Darwin.tar.gz 
-    tar -xzf NPDtools-2.6.0-alpha-Darwin.tar.gz
-    cd NPDtools-2.6.0-alpha-Darwin
+    curl https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-beta/NPDtools-2.6.0-beta-Darwin.tar.gz -o NPDtools-2.6.0-beta-Darwin.tar.gz 
+    tar -xzf NPDtools-2.6.0-beta-Darwin.tar.gz
+    cd NPDtools-2.6.0-beta-Darwin
 ```
 
 We further refer to this directory as `<npdtools_installation_dir>`. 
@@ -168,7 +168,7 @@ you may need to explicitly specify the proper version before the running script 
 
 To demonstrate working examples of each pipeline, 
 we use small test datasets provided within the NPDtools package and also available online from 
-<https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-alpha/test_data.tar.gz>. 
+<https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-beta/test_data.tar.gz>. 
 We further assume that `test_data` is in the current working directory and give the corresponding relative paths. 
 If you use test dataset from the installation package, 
 you may need to specify the full paths as 
@@ -486,14 +486,14 @@ of our default small molecule identification approach (Dereplicator+) by
 (ii) learning a probabilistic model to match small molecules with their mass spectra. 
 
 The running procedure and the main concepts are similar to the ones of Dereplicator+ (see [above](#sec_run_db_dereplicator+)).
-The key difference is that the current version of molDiscovery is trained for only charge +1 molecules and 
+The key difference is that the current version of molDiscovery is trained for only charge +1 and +2 molecules and 
 only one fragmentation pattern (at most two bridges and one 2-cut are allowed). Also, the preprocessed database files of 
 molDiscovery are saved into files named `<library_info>.prob.mz.target.bin` and `<library_info>.prob.mz.decoy.bin` by default.
 
 Finally, note that molDiscovery scores scale is different from the one used in Dereplicator+, so you may want to use another default 
 value for `--min-score` option depending on your data. 
-For example, sample test spectra of Surugamide and Chalcomycin are normally identified by Dereplicator+ with scores 20 and 14 (all default settings),
-while the molDiscovery scores for them are 81.0238 and 84.4949, respectively.
+For example, sample test spectra of Surugamide and Chalcomycin are normally identified by Dereplicator+ with scores 20 and 15 (all default settings),
+while the molDiscovery scores for them are 116.304 and 76.2041, respectively.
 
 #### Usage example 
 A sample run of molDiscovery may look like this:
