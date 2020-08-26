@@ -14,7 +14,7 @@ The current version (beta) can be downloaded from <https://github.com/mohimanila
 The stable release and all further versions will be available in the **N**atural **P**roduct **D**iscovery **tool**kit (**NPDtools**) at <https://github.com/ablab/npdtools>.
 
 ## Web version
-You can try [molDiscovery workflow](https://gnps.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22:%22DEREPLICATOR_PLUS%22%7D) online at the GNPS platform ([registration](https://gnps.ucsd.edu/ProteoSAFe/user/register.jsp) is needed but it is quick and simple). Note that you need to login first to be able to open the workflow link. Alternatively, follow the instructions below to install and run our command line tool (available for Linux and macOS).
+You can try [molDiscovery workflow](https://gnps.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22:%22MOLDISCOVERY%22%7D) online at the GNPS platform ([registration](https://gnps.ucsd.edu/ProteoSAFe/user/register.jsp) is needed but it is quick and simple). Note that you need to login first to be able to open the workflow link. Alternatively, follow the instructions below to install and run our command line tool (available for Linux and macOS).
 
 ## Installation & Running instructions
 Please refer to the [NPDtools manual](docs/NPDtools-2.6.0-beta-manual.md) for all details. 
