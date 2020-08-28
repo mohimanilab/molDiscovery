@@ -42,6 +42,9 @@ Dereplicator+ and molDiscovery in the search of 45 GNPS spectral datasets agains
 
 ![alt text](docs/GNPS_fdr_benchmarking.png "MolDiscovery performance")
 
+### Novel BGCs in streptomyces dataset
+MolDiscovery successfully discovered novel BGCs for three small molecule families from streptomyces dataset MSV000083738 (see the previous analysis of this dataset in [Navarro-Muñoz et al., 2020](https://www.nature.com/articles/s41589-019-0400-9?draft=collection) and [Doroghazi et al., 2014](https://pubmed.ncbi.nlm.nih.gov/25262415/)). MolDiscovery search results for this dataset on GNPS are available [here](https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=841d4a929ebf43638dfcd5f905a4b138&view=view_significant_unique).
+
 ### Pseudomonas dataset manual curation
 We benchmarked molDiscovery against Dereplicator+ on top 100 identifications from extensively studied GNPS dataset 
 [MSV000079450](https://gnps.ucsd.edu/ProteoSAFe/result.jsp?task=5728ca4b0dfd4c058e0ef6151a31f9c4&view=advanced_view) 
