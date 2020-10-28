@@ -16,17 +16,25 @@ The stable release and all further versions will be available in the **N**atural
 ## Web version
 You can try [molDiscovery workflow](https://gnps.ucsd.edu/ProteoSAFe/index.jsp?params=%7B%22workflow%22:%22MOLDISCOVERY%22%7D) online at the GNPS platform ([registration](https://gnps.ucsd.edu/ProteoSAFe/user/register.jsp) is needed but it is quick and simple). Note that you need to login first to be able to open the workflow link. Alternatively, follow the instructions below to install and run our command line tool (available for Linux and macOS).
 
-## Installation & Running instructions
+## Installation
 Please refer to the [NPDtools manual](docs/NPDtools-2.6.0-beta-manual.md) for all details. 
 Specific details regarding molDiscovery are in [this section](docs/NPDtools-2.6.0-beta-manual.md#sec_run_db_moldiscovery).
 
-Basic example (this is for Linux, please substitute `Linux` to `Darwin` for replicating on macOS):
+Basic example of installation (this is for Linux, please substitute `Linux` to `Darwin` for replicating on macOS):
 ``` bash
-    wget https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-beta/NPDtools-2.6.0-beta-Linux.tar.gz
-    tar -xzf NPDtools-2.6.0-beta-Linux.tar.gz
-    cd NPDtools-2.6.0-beta-Linux
-    python2.7 bin/moldiscovery.py share/npdtools/test_data/moldiscovery/ --db-path share/npdtools/test_data/sample_database/ -o moldiscovery_outdir
-``` 
+wget https://github.com/mohimanilab/molDiscovery/releases/download/npdtools-2.6.0-beta/NPDtools-2.6.0-beta-Linux.tar.gz
+tar -xzf NPDtools-2.6.0-beta-Linux.tar.gz
+```
+
+## Running instructions
+After installation, run the toy example as follows,
+```bash
+cd NPDtools-2.6.0-beta-Linux
+python2.7 bin/moldiscovery.py share/npdtools/test_data/moldiscovery/ --db-path share/npdtools/test_data/sample_database/ -o moldiscovery_outdir
+```
+
+MolDiscovery will automatically search for all the `mzML`, `mzXML` and `mgf` files in the input spectra folder `share/npdtools/test_data/moldiscovery/` against small molecule database `share/npdtools/test_data/sample_database/`.
+
 If the run is finished correctly, you will see identifications of a nonribosomal peptide (Surugamide) and a polyketide (Chalcomycin) 
 listed in `moldiscovery_outdir/significant_matches.tsv`. The column names are self-explanatory in principle but you can always 
 find more details in the [corresponding section](docs/NPDtools-2.6.0-beta-manual.md#sec_run_output) of the manual.
@@ -38,7 +46,7 @@ We analyzed 7.6 million spectra from global natural product social molecular net
 (GNPS, <https://gnps.ucsd.edu/>) using molDiscovery and regular Dereplicator+. 
 The figure below demonstrates performance of the both tools at different false discovery rate (FDR) levels.  
 The curves show the number of (A) small molecule-spectrum matches and (B) unique compounds identified by 
-Dereplicator+ and molDiscovery in the search of 45 GNPS spectral datasets against AllDB (719,958 compounds from AntiMarin, DNP, UNPD, and other databases).
+Dereplicator+ and molDiscovery in the search of 45 GNPS spectral datasets against AllDB (719,958 compounds from HMDB, NPAtlas and other databases).
 
 ![alt text](docs/GNPS_fdr_benchmarking.png "MolDiscovery performance")
 
