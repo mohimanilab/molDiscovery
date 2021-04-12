@@ -41,6 +41,10 @@ find more details in the [corresponding section](docs/NPDtools-2.6.0-beta-manual
 
 ## Results
 
+### Dataset availability
+
+See [data](https://github.com/mohimanilab/molDiscovery/tree/master/data) directory for detailed information of the source data of molDiscovery paper.
+
 ### Massive GNPS analysis
 We analyzed 7.6 million spectra from global natural product social molecular networking infrastructure 
 (GNPS, <https://gnps.ucsd.edu/>) using molDiscovery and regular Dereplicator+. 
